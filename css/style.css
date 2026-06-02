@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Ole&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    background:url("../assets/images/snake-back.png");
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scoreBox{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fffb00;
+    font-family: "Ole", cursive;
+  
+
+}
+
+#board{
+    background: linear-gradient(#7AC70D,#EE930A);
+    width: 90vmin;
+    height: 92vmin;
+    border:2px solid #000;
+    display:grid;
+    grid-template-columns: repeat(18,1fr);  
+    grid-template-rows: repeat(18,1fr);
+}
+
+/* Snake Head */
+.head{
+    background: radial-gradient(circle at 30% 30%, #ff8080, #ff0000);
+    border: 0.35vmin solid white;
+    border-radius: 40%;
+    box-shadow:
+        0 0 15px red,
+        inset -2px -2px 8px darkred;
+    transform: scale(1.08);
+}
+
+/* Snake Body */
+.snake{
+    background: linear-gradient(135deg, #8a2be2, #4b0082);
+    border: 0.25vmin solid #ffffff;
+    border-radius: 12px;
+    box-shadow:0 0 10px rgba(138,43,226,0.7),
+    inset -2px -2px 5px rgba(0,0,0,0.4);
+    transition: all 0.1s ease;
+}
+
+/* Food */
+.food{
+    background: radial-gradient(circle, #fffb00, #ff0000);
+    border: 0.25vmin solid white;
+    border-radius: 50%;
+    box-shadow:0 0 18px orange,0 0 25px red;
+    animation: pulse 0.8s infinite alternate;
+}
+
+/* Food Animation */
+@keyframes pulse{
+
+    from{
+        transform: scale(1);
+    }
+
+    to{
+        transform: scale(1.2);
+    }
+}
