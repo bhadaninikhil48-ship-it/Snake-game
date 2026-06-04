@@ -78,3 +78,41 @@
         transform: scale(1.2);
     }
 }
+
+.controls{
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.controls button{
+
+    width: 50px;
+    height: 50px;
+
+    margin: 5px;
+
+    font-size: 30px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: #222;
+    color: white;
+
+    box-shadow: 0 0 10px cyan;
+}
+
+.horizontal{
+    display: flex;
+    justify-content: center;
+}
+
+/* Mobile Only */
+@media(max-width: 768px){
+
+    .controls{
+        display: block;
+    }
+}

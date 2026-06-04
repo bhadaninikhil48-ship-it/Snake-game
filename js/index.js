@@ -4,6 +4,9 @@ const foodSound = new Audio("../assets/audio/eat.mp3")
 const gameOverSound = new Audio("../assets/audio/gameOver.mp3")
 const moveSound = new Audio("../assets/audio/direction.mp3")
 const musicSound = new Audio("../assets/audio/background.mp3")
+musicSound.volume = 0.4;
+musicSound.loop = true;
+moveSound.volume = 0.3
 let speed = 5
 let score = 0
 let lastPaintTime = 0
@@ -136,4 +139,28 @@ window.addEventListener("keydown",e=>{
         default:
             break;
     }
+})
+
+document.getElementById("up").addEventListener("click", ()=>{
+
+    inputDir.x = 0
+    inputDir.y = -1
+})
+
+document.getElementById("down").addEventListener("click", ()=>{
+
+    inputDir.x = 0
+    inputDir.y = 1
+})
+
+document.getElementById("left").addEventListener("click", ()=>{
+
+    inputDir.x = -1
+    inputDir.y = 0
+})
+
+document.getElementById("right").addEventListener("click", ()=>{
+
+    inputDir.x = 1
+    inputDir.y = 0
 })
